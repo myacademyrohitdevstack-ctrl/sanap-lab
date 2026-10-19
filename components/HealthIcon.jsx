@@ -1,0 +1,56 @@
+import {
+  Droplets,
+  Activity,
+  ShieldCheck,
+  Sun,
+  HeartPulse,
+  Microscope,
+  Sparkles,
+  Clock,
+  Stethoscope,
+  TestTube2,
+  Calendar,
+  CheckCircle2,
+  FileCheck2,
+  MapPin,
+  Phone,
+  ArrowRight,
+  Shield,
+  Layers,
+  Heart,
+  Thermometer,
+} from "lucide-react";
+
+const ICON_MAP = {
+  Droplets,
+  drop: Droplets,
+  Activity,
+  activity: Activity,
+  ShieldCheck,
+  shield: ShieldCheck,
+  Sun,
+  sun: Sun,
+  HeartPulse,
+  heart: HeartPulse,
+  Microscope,
+  alert: Microscope,
+  Sparkles,
+  layers: Layers,
+  Clock,
+  Stethoscope,
+  TestTube2,
+  Calendar,
+  CheckCircle2,
+  FileCheck2,
+  MapPin,
+  Phone,
+  ArrowRight,
+  Shield,
+  Heart,
+  Thermometer,
+};
+
+export default function HealthIcon({ name, className = "w-5 h-5", ...props }) {
+  const IconComponent = ICON_MAP[name] || Activity;
+  return <IconComponent className={className} {...props} />;
+}
